@@ -13,6 +13,7 @@ A simple C++ code to find roots of quadratic equation. Shows the real roots of e
 # Running
 
 - Basic libraries are needed, but its there with most IDE's.
-- To run this code, you need a C++ compiler installed in pc.
+- To run this code, you need a C++ compiler installed in system.
 - Can be run in android/ios, but a proper ide/app is needed to run.
 - Alternatively, people can use web IDE for this purpose.
+- The code is made using Visual studio code, with C/C++ extension of microsoft. For compiling, Mingw-x64 is used.
