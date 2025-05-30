@@ -51,34 +51,45 @@ int main() {
       goto confirm;
    }
 
-   //  Things get serious and dumb from here
+   //  Calculating part starts from here
    //  We are checking the no:of roots using function
    process:
    discriminant = discriminant_fn(a,b,c);
 
 
    if (discriminant > 0) {
-      cout << "\nThere are 2 real roots";
-      goto roots;
+      cout << "\nThere are 2 real roots" << endl;
+
+      // Finding roots (This is crucial, dont remove it!)
+      r1 = ( (-b + sqrt(discriminant) ) / (2.0*a) );
+      r2 = ( (-b - sqrt(discriminant) ) / (2.0*a) );
+
+      // Printing the roots
+      cout << "The values are:\t" << r1 << " And " << r2 ;
    }
+
    else if (discriminant == 0) {
-      cout << "\nA unique root is possible";
-      exit(0);
+      cout << "\nA unique root is only possible" << endl;
+
+      // Finding the one root (discriminant is zero here so no need to add)
+      r1 = ( (-b) / (2.0*a) );
+
+      // Output
+      cout << "The root is: " << r1 << endl;
    }
+
    else {
-      cout << "\nNo real roots are there";
-      exit(0);
+      cout << "\nNo real roots are there. Roots will be imaginary" << endl;
+
+      // Removing -ve sign from value for calculation
+      discriminant = abs(discriminant);
+
+      // Since calculation of root is not possible without advanced headers, i will just print it.
+      // I know the cout code looks weird, but it works :)
+      cout << "One of the root is (" << -b << "+ i" << sqrt(discriminant) << ") / (" << 2.0*a << ")" << endl;
+      cout << "The next root is (" << -b << "- i" << sqrt(discriminant) << ") / (" << 2.0*a << ")" << endl;
    }
-   
-   // Finding the roots
-   // Atleast this is important, dont remove it XD
-   roots:
-   pos = ( (-b + sqrt(discriminant) ) / (2*a) );
-   neg = ( (-b - sqrt(discriminant) ) / (2*a) );
-
-   // Printing the values
-   cout << "\nThe values are:\t" << pos << " And " << neg ;
-
+   return 0;
 }
 
 // The function which we are gonna use to find discriminant
