@@ -1,5 +1,5 @@
 # Quadratic-root-finder
-A simple C++ code to find roots of quadratic equation. Shows the real roots of equation and otherwise notifies user that equation has one/no root.
+A simple C++ code to find roots of quadratic equation. Shows the real or imaginary roots of equation. Imaginary roots are shown as format with denominator.
 
 # Working
 
